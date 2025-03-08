@@ -9,10 +9,10 @@
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f4f4f4;
-            padding: 50px;
+            padding: 20px;
+            margin: 0;
         }
-        
-        /* Floating Title Animation */
+
         @keyframes floatTitle {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
@@ -24,6 +24,13 @@
             font-size: 28px;
             text-shadow: 0 0 5px #3FFF05, 0 0 10px rgba(63, 255, 5, 0.5);
             animation: floatTitle 3s infinite ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .container-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .container {
@@ -31,16 +38,16 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
             width: 300px;
+            margin-bottom: 15px;
         }
 
         h2 {
             font-size: 20px;
             color: #555;
+            margin-bottom: 10px;
         }
 
-        /* Button Animation */
         @keyframes bounceButton {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-3px); }
@@ -68,55 +75,32 @@
 </head>
 <body>
     <h1>Minecraft Paid Plugins</h1>
-    
-    <div class="container">
-        <h2>LifeStealCore</h2>
-        <a href="https://www.mediafire.com/file/gqaztuus09eqmus/LifestealCore_Build_2024.12-c.jar/file" class="download-btn" target="_blank">Download</a>
-    </div>
 
-    <div class="container">
-        <h2>ItemsAdder</h2>
-        <a href="https://www.mediafire.com/file/dq54xg97aedh6dy/ItemsAdder_4.0.8..jar/file" class="download-btn" target="_blank">Download</a>
-    </div>
+    <div class="container-wrapper">
+        <div class="container">
+            <h2>LifeStealCore</h2>
+            <a href="https://www.mediafire.com/file/gqaztuus09eqmus/LifestealCore_Build_2024.12-c.jar/file" class="download-btn" target="_blank">Download</a>
+        </div>
 
-    <div class="container">
-        <h2>AdvancedEnchantments</h2>
-        <a href="https://www.mediafire.com/file/abc123/AdvancedEnchantments.jar/file" class="download-btn" target="_blank">Download</a>
-    </div>
+        <div class="container">
+            <h2>ItemsAdder</h2>
+            <a href="https://www.mediafire.com/file/dq54xg97aedh6dy/ItemsAdder_4.0.8..jar/file" class="download-btn" target="_blank">Download</a>
+        </div>
 
-    <div class="container">
-        <h2>Citizens</h2>
-        <a href="https://www.mediafire.com/file/xyz456/Citizens.jar/file" class="download-btn" target="_blank">Download</a>
-    </div>
+        <div class="container">
+            <h2>AdvancedEnchantments</h2>
+            <a href="https://www.mediafire.com/file/abc123/AdvancedEnchantments.jar/file" class="download-btn" target="_blank">Download</a>
+        </div>
 
-    <div class="container">
-        <h2>DeluxeMenus</h2>
-        <a href="https://www.mediafire.com/file/lmn789/DeluxeMenus.jar/file" class="download-btn" target="_blank">Download</a>
-    </div>
+        <div class="container">
+            <h2>Citizens</h2>
+            <a href="https://www.mediafire.com/file/xyz456/Citizens.jar/file" class="download-btn" target="_blank">Download</a>
+        </div>
 
-    <div class="container">
-        <h2>UltraCustomizer</h2>
-        <a href="https://www.mediafire.com/file/pqr012/UltraCustomizer.jar/file" class="download-btn" target="_blank">Download</a>
-    </div>
-
-    <div class="container">
-        <h2>GSit (Premium)</h2>
-        <a href="https://www.mediafire.com/file/efg345/GSit.jar/file" class="download-btn" target="_blank">Download</a>
-    </div>
-
-    <div class="container">
-        <h2>UltraPermissions</h2>
-        <a href="https://www.mediafire.com/file/hij678/UltraPermissions.jar/file" class="download-btn" target="_blank">Download</a>
-    </div>
-
-    <div class="container">
-        <h2>AuctionHouse</h2>
-        <a href="https://www.mediafire.com/file/klm901/AuctionHouse.jar/file" class="download-btn" target="_blank">Download</a>
-    </div>
-
-    <div class="container">
-        <h2>TAB (Premium)</h2>
-        <a href="https://www.mediafire.com/file/nop234/TAB.jar/file" class="download-btn" target="_blank">Download</a>
+        <div class="container">
+            <h2>UltraPermissions</h2>
+            <a href="https://www.mediafire.com/file/hij678/UltraPermissions.jar/file" class="download-btn" target="_blank">Download</a>
+        </div>
     </div>
 </body>
 </html>
