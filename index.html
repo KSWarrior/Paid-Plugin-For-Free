@@ -3,132 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Important Plugins</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Minecraft Paid Plugins</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        
+        /* Floating Title Animation */
+        @keyframes floatTitle {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        h1 {
+            color: #3FFF05;
+            font-size: 28px;
+            text-shadow: 0 0 5px #3FFF05, 0 0 10px rgba(63, 255, 5, 0.5);
+            animation: floatTitle 3s infinite ease-in-out;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 300px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #555;
+        }
+
+        /* Button Animation */
+        @keyframes bounceButton {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #3FFF05;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+            box-shadow: 0 0 5px #3FFF05;
+        }
+
+        .download-btn:hover {
+            background: #36E004;
+            box-shadow: 0 0 10px rgba(63, 255, 5, 0.6);
+            animation: bounceButton 0.6s ease-in-out;
+        }
+    </style>
 </head>
 <body>
-
-<div class="title">
-    <h1>Important Plugins List</h1>
-    <p>KS Warrior</p>
-    <a href="https://discord.gg/YxA4aAfXKT" class="btn-discord" target="_blank">Join Discord</a>
-</div>
-
-<div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search plugins...">
-    <p>Total Plugins: <span id="pluginCount"></span></p>
-</div>
-
-<div class="container" id="pluginContainer">
-
-    <!-- Admin Plugins -->
-    <h2>🛡️ Admin Plugins</h2>
-    <div class="plugin">
-        <h3>InvSee++</h3>
-        <p>Allows admins to see and modify player inventories.</p>
-        <a href="https://www.spigotmc.org/resources/invsee.82342/" target="_blank">Download InvSee++</a>
-    </div>
-
-    <div class="plugin">
-        <h3>LuckPerms</h3>
-        <p>A powerful permissions management plugin.</p>
-        <a href="https://luckperms.net/download" target="_blank">Download LuckPerms</a>
-    </div>
-
-    <div class="plugin">
-        <h3>Custom-Join-Messages</h3>
-        <p>Allows you to create custom join and leave messages.</p>
-        <a href="https://www.spigotmc.org/resources/custom-join-messages.69399/" target="_blank">Download Custom-Join-Messages</a>
-    </div>
-
-    <!-- Economy Plugins -->
-    <h2>💰 Economy Plugins</h2>
-    <div class="plugin">
-        <h3>EconomyShopGUI</h3>
-        <p>Adds a GUI-based economy shop to your server.</p>
-        <a href="https://www.spigotmc.org/resources/economyshopgui.69927/" target="_blank">Download EconomyShopGUI</a>
-    </div>
-
-    <div class="plugin">
-        <h3>Vault</h3>
-        <p>A permission, chat, and economy API.</p>
-        <a href="https://www.spigotmc.org/resources/vault.34315/" target="_blank">Download Vault</a>
-    </div>
-
-    <!-- Survival Plugins -->
-    <h2>🌲 Survival Plugins</h2>
-    <div class="plugin">
-        <h3>LevelledMobs</h3>
-        <p>Adds leveling and scaling to mobs.</p>
-        <a href="https://www.spigotmc.org/resources/levelledmobs.74304/" target="_blank">Download LevelledMobs</a>
-    </div>
-
-    <div class="plugin">
-        <h3>One Player Sleep</h3>
-        <p>Skips the night if one player sleeps.</p>
-        <a href="https://www.spigotmc.org/resources/one-player-sleep.76441/" target="_blank">Download One Player Sleep</a>
-    </div>
-
-    <div class="plugin">
-        <h3>VeinMiner (Paper)</h3>
-        <p>Allows players to mine entire ore veins by breaking one block.</p>
-        <a href="https://www.spigotmc.org/resources/veinminer-paper.60503/" target="_blank">Download VeinMiner (Paper)</a>
-    </div>
-
-    <div class="plugin">
-        <h3>CreeperHeal</h3>
-        <p>Automatically repairs creeper explosions.</p>
-        <a href="https://www.spigotmc.org/resources/creeperheal.28256/" target="_blank">Download CreeperHeal</a>
-    </div>
-
-    <!-- Cross-Platform Plugins -->
-    <h2>🌐 Cross-Platform Plugins</h2>
-    <div class="plugin">
-        <h3>Geyser-Spigot</h3>
-        <p>Allows Bedrock players to join Java servers.</p>
-        <a href="https://geysermc.org/download" target="_blank">Download Geyser-Spigot</a>
-    </div>
-
-    <div class="plugin">
-        <h3>ViaVersion</h3>
-        <p>Allows players with newer versions to join older servers.</p>
-        <a href="https://www.spigotmc.org/resources/viaversion.19254/" target="_blank">Download ViaVersion</a>
-    </div>
-
-    <div class="plugin">
-        <h3>ViaBackwards</h3>
-        <p>Allows older Minecraft versions to join newer servers.</p>
-        <a href="https://www.spigotmc.org/resources/viabackwards.27448/" target="_blank">Download ViaBackwards</a>
-    </div>
-
-</div>
-
-<script>
-    // Plugin Search Functionality
-    const searchInput = document.getElementById("searchInput");
-    const pluginContainer = document.getElementById("pluginContainer");
-    const pluginCount = document.getElementById("pluginCount");
+    <h1>Minecraft Paid Plugins</h1>
     
-    const plugins = document.querySelectorAll(".plugin");
-    pluginCount.innerText = plugins.length;
+    <div class="container">
+        <h2>LifeStealCore</h2>
+        <a href="https://www.mediafire.com/file/gqaztuus09eqmus/LifestealCore_Build_2024.12-c.jar/file" class="download-btn" target="_blank">Download</a>
+    </div>
 
-    searchInput.addEventListener("input", () => {
-        const searchText = searchInput.value.toLowerCase();
-        let visibleCount = 0;
-        
-        plugins.forEach(plugin => {
-            const text = plugin.innerText.toLowerCase();
-            if (text.includes(searchText)) {
-                plugin.style.display = "block";
-                visibleCount++;
-            } else {
-                plugin.style.display = "none";
-            }
-        });
+    <div class="container">
+        <h2>ItemsAdder</h2>
+        <a href="https://www.mediafire.com/file/dq54xg97aedh6dy/ItemsAdder_4.0.8..jar/file" class="download-btn" target="_blank">Download</a>
+    </div>
 
-        pluginCount.innerText = visibleCount;
-    });
-</script>
+    <div class="container">
+        <h2>AdvancedEnchantments</h2>
+        <a href="https://www.mediafire.com/file/abc123/AdvancedEnchantments.jar/file" class="download-btn" target="_blank">Download</a>
+    </div>
 
+    <div class="container">
+        <h2>Citizens</h2>
+        <a href="https://www.mediafire.com/file/xyz456/Citizens.jar/file" class="download-btn" target="_blank">Download</a>
+    </div>
+
+    <div class="container">
+        <h2>DeluxeMenus</h2>
+        <a href="https://www.mediafire.com/file/lmn789/DeluxeMenus.jar/file" class="download-btn" target="_blank">Download</a>
+    </div>
+
+    <div class="container">
+        <h2>UltraCustomizer</h2>
+        <a href="https://www.mediafire.com/file/pqr012/UltraCustomizer.jar/file" class="download-btn" target="_blank">Download</a>
+    </div>
+
+    <div class="container">
+        <h2>GSit (Premium)</h2>
+        <a href="https://www.mediafire.com/file/efg345/GSit.jar/file" class="download-btn" target="_blank">Download</a>
+    </div>
+
+    <div class="container">
+        <h2>UltraPermissions</h2>
+        <a href="https://www.mediafire.com/file/hij678/UltraPermissions.jar/file" class="download-btn" target="_blank">Download</a>
+    </div>
+
+    <div class="container">
+        <h2>AuctionHouse</h2>
+        <a href="https://www.mediafire.com/file/klm901/AuctionHouse.jar/file" class="download-btn" target="_blank">Download</a>
+    </div>
+
+    <div class="container">
+        <h2>TAB (Premium)</h2>
+        <a href="https://www.mediafire.com/file/nop234/TAB.jar/file" class="download-btn" target="_blank">Download</a>
+    </div>
 </body>
 </html>
