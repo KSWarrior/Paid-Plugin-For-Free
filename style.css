@@ -1,151 +1,85 @@
-/* General Styling */
-body {
-    background-color: black;
-    color: white;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+}
+.title {
     text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
-
-/* Title */
-.main-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #3fff05; /* Light Green */
-    text-shadow: 0 0 10px #3fff05;
+.title h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #3fff05, #3fff05);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
-/* Hosting Card Container */
-.hosting-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
-}
-
-/* Hosting Card */
-.hosting-card {
-    background-color: #111;
-    border: 2px solid #3fff05;
-    border-radius: 10px;
-    padding: 15px;
-    width: 300px;
-    text-align: center;
-    position: relative;
-    transition: transform 0.3s ease-in-out;
-    box-shadow: 0 0 15px #3fff05;
-}
-
-.hosting-card:hover {
-    transform: scale(1.05);
-}
-
-/* Hosting Name */
-.hosting-name {
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-}
-
-/* Hosting Info */
-.hosting-info {
-    font-size: 14px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.info-item {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.online {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 5px 10px;
-    border-radius: 5px;
+.title p {
+    font-size: 2.5rem;
     color: #3fff05;
     font-weight: bold;
-    text-shadow: 0 0 10px #3fff05;
 }
-
-.offline {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: red;
-    font-weight: bold;
-    text-shadow: 0 0 10px red;
-}
-
-/* Discord Button */
-.discord-button {
+.btn-discord {
+    display: inline-block;
     background-color: #3fff05;
-    color: black;
-    text-color: black;
-    border: none;
-    padding: 8px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
+    color: #000;
+    padding: 12px 30px;
+    text-decoration: none;
     border-radius: 5px;
-    margin-top: 10px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 10px #3fff05;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.3s;
 }
-
-
-/* Location */
-.location {
-    font-size: 12px;
-    margin-top: 8px;
-    padding: 5px;
-    color: lightgray;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
+.btn-discord:hover {
+    background-color: #32cc04;
+    transform: scale(1.05);
 }
-
-/* Visit Button */
-.visit-button {
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.plugin {
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    transition: transform 0.5s, box-shadow 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+.plugin:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+}
+.plugin h3 {
+    color: #3fff05;
+    font-size: 2rem;
+}
+.plugin p {
+    margin: 15px 0;
+    font-size: 1rem;
+    color: #cfcfcf;
+}
+a {
+    display: inline-block;
     background-color: #3fff05;
-    color: black;
-    border: none;
-    padding: 8px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
+    color: #000;
+    padding: 12px 25px;
+    text-decoration: none;
     border-radius: 5px;
-    margin-top: 10px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 0 10px #3fff05;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
 }
-
-.visit-button:hover {
+a:hover {
+    background-color: #32cc04;
     transform: scale(1.1);
-    box-shadow: 0 0 20px #3fff05;
 }
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .hosting-card {
-        width: 280px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hosting-container {
-        justify-content: space-around;
-    }
-}
-
-@media (max-width: 600px) {
-    .hosting-card {
-        width: 90%;
-    }
-  }
