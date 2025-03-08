@@ -1,85 +1,148 @@
-* {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
-body {
-    background-color: #0d0d0d;
-    color: #ffffff;
-}
+
+/* Title Section */
 .title {
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    padding: 40px 0;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 .title h1 {
     font-size: 3rem;
-    background: linear-gradient(90deg, #3fff05, #3fff05);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.title p {
-    font-size: 2.5rem;
     color: #3fff05;
-    font-weight: bold;
+    margin: 0;
 }
+
+.title p {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    color: #bbb;
+}
+
 .btn-discord {
-    display: inline-block;
     background-color: #3fff05;
     color: #000;
     padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    margin-top: 15px;
-    transition: background-color 0.3s, transform 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s;
 }
+
 .btn-discord:hover {
-    background-color: #32cc04;
+    background-color: #2bbb04;
+    transform: scale(1.1);
+}
+
+/* Search Bar Section */
+.search-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#searchInput {
+    width: 60%;
+    padding: 14px 20px;
+    border: 2px solid #3fff05;
+    border-radius: 25px;
+    font-size: 18px;
+    outline: none;
+    background-color: #1a1a1a;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #2bbb04;
+    box-shadow: 0 0 20px #3fff05;
     transform: scale(1.05);
 }
+
+#searchInput::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Plugin Counter */
+p {
+    font-size: 18px;
+    color: #3fff05;
+    margin-top: 10px;
+}
+
+/* Plugin Section */
 .container {
+    width: 90%;
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    margin: auto;
 }
+
+h2 {
+    color: #3fff05;
+    border-bottom: 2px solid #3fff05;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Plugin Cards */
 .plugin {
-    background-color: #1c1c1c;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-    transition: transform 0.5s, box-shadow 0.5s;
-    position: relative;
-    overflow: hidden;
+    background-color: #1a1a1a;
+    border: 1px solid #3fff05;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
 }
+
 .plugin:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+    transform: scale(1.05);
+    border-color: #2bbb04;
+    box-shadow: 0 8px 20px #3fff05;
 }
+
 .plugin h3 {
     color: #3fff05;
-    font-size: 2rem;
+    margin-bottom: 10px;
+    font-size: 22px;
 }
+
 .plugin p {
-    margin: 15px 0;
-    font-size: 1rem;
-    color: #cfcfcf;
+    color: #bbb;
+    margin-bottom: 15px;
 }
-a {
-    display: inline-block;
+
+.plugin a {
     background-color: #3fff05;
     color: #000;
-    padding: 12px 25px;
+    padding: 10px 25px;
+    border-radius: 20px;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: all 0.3s;
 }
-a:hover {
-    background-color: #32cc04;
+
+.plugin a:hover {
+    background-color: #2bbb04;
     transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #searchInput {
+        width: 90%;
+    }
+
+    .plugin {
+        padding: 15px;
+    }
 }
