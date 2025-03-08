@@ -1,148 +1,66 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-}
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+        }
 
-/* Title Section */
-.title {
-    text-align: center;
-    padding: 40px 0;
-    background-color: #1a1a1a;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+        @keyframes floatTitle {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
 
-.title h1 {
-    font-size: 3rem;
-    color: #3fff05;
-    margin: 0;
-}
+        h1 {
+            color: #3FFF05;
+            font-size: 28px;
+            text-shadow: 0 0 5px #3FFF05, 0 0 10px rgba(63, 255, 5, 0.5);
+            animation: floatTitle 3s infinite ease-in-out;
+            margin-bottom: 20px;
+        }
 
-.title p {
-    font-size: 1.5rem;
-    margin: 5px 0;
-    color: #bbb;
-}
+        .container-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.btn-discord {
-    background-color: #3fff05;
-    color: #000;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: all 0.3s;
-}
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 15px;
+        }
 
-.btn-discord:hover {
-    background-color: #2bbb04;
-    transform: scale(1.1);
-}
+        h2 {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 10px;
+        }
 
-/* Search Bar Section */
-.search-container {
-    text-align: center;
-    margin: 30px 0;
-}
+        @keyframes bounceButton {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+            100% { transform: translateY(0px); }
+        }
 
-#searchInput {
-    width: 60%;
-    padding: 14px 20px;
-    border: 2px solid #3fff05;
-    border-radius: 25px;
-    font-size: 18px;
-    outline: none;
-    background-color: #1a1a1a;
-    color: #fff;
-    transition: all 0.3s;
-}
+        .download-btn {
+            display: inline-block;
+            background: #3FFF05;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: 0.3s;
+            box-shadow: 0 0 5px #3FFF05;
+        }
 
-#searchInput:focus {
-    border-color: #2bbb04;
-    box-shadow: 0 0 20px #3fff05;
-    transform: scale(1.05);
-}
-
-#searchInput::placeholder {
-    color: #999;
-    font-style: italic;
-}
-
-/* Plugin Counter */
-p {
-    font-size: 18px;
-    color: #3fff05;
-    margin-top: 10px;
-}
-
-/* Plugin Section */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-h2 {
-    color: #3fff05;
-    border-bottom: 2px solid #3fff05;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-/* Plugin Cards */
-.plugin {
-    background-color: #1a1a1a;
-    border: 1px solid #3fff05;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s;
-}
-
-.plugin:hover {
-    transform: scale(1.05);
-    border-color: #2bbb04;
-    box-shadow: 0 8px 20px #3fff05;
-}
-
-.plugin h3 {
-    color: #3fff05;
-    margin-bottom: 10px;
-    font-size: 22px;
-}
-
-.plugin p {
-    color: #bbb;
-    margin-bottom: 15px;
-}
-
-.plugin a {
-    background-color: #3fff05;
-    color: #000;
-    padding: 10px 25px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
-}
-
-.plugin a:hover {
-    background-color: #2bbb04;
-    transform: scale(1.1);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #searchInput {
-        width: 90%;
-    }
-
-    .plugin {
-        padding: 15px;
-    }
-}
+        .download-btn:hover {
+            background: #36E004;
+            box-shadow: 0 0 10px rgba(63, 255, 5, 0.6);
+            animation: bounceButton 0.6s ease-in-out;
+        }
