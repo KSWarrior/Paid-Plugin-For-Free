@@ -3,99 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verification Required</title>
+    <title>Verify Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            color: #333;
+            background-color: #f4f4f4;
             text-align: center;
+            padding: 50px;
         }
 
-        h1 {
-            color: #00A2FF;
-        }
-
-        .verify-card {
+        .container {
+            background-color: white;
             padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             display: inline-block;
         }
 
-        .verify-btn, .join-btn {
-            background-color: #00A2FF;
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3FFF05;
             border: none;
             color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 5px;
             cursor: pointer;
-        }
-
-        .verify-btn:hover, .join-btn:hover {
-            background-color: #0080CC;
-        }
-
-        input {
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
             border-radius: 5px;
-            width: 80%;
+        }
+
+        button:hover {
+            background-color: #36e004;
+        }
+
+        .error {
+            color: red;
+            display: none;
         }
     </style>
 </head>
 <body>
 
-<br><br><br>
-<h1>Paid Plugins For Free</h1>
-<p>Need Passcode To Download Paid Plugins For Free</p>
-<input type="text" id="passcode" placeholder="Enter Passcode">
-<br>
-<button class="verify-btn" onclick="verify()">Verify</button>
-
-<div>
+<div class="container">
+    <h2>Enter Passcode</h2>
+    <input type="password" id="passcode" placeholder="Enter Passcode">
     <br>
-    <p>You get Passcode In Discord Server</p>
-    <br>
-    <a href="https://discord.gg/YxA4aAfXKT" target="_blank">
-        <button class="join-btn">Join Discord</button>
-    </a>
+    <button onclick="verifyPasscode()">Verify</button>
+    <p class="error" id="error">Incorrect Passcode!</p>
 </div>
 
 <script>
-function verify() {
-    const passcode = document.getElementById('passcode').value;
-    const validPasscodes = ["24", "25", "26"];
+    function verifyPasscode() {
+        var passcode = document.getElementById("passcode").value;
+        var validPasscodes = ["24", "25", "26"];
 
-    if (validPasscodes.includes(passcode)) {
-        alert("Passcode verified! Access granted.");
-        localStorage.setItem("verified", "true");
-        localStorage.setItem("verifyTime", Date.now().toString());
-        window.location.href = "dashboard.html";
-    } else {
-        alert("Incorrect Passcode. Please check the Passcode in our Discord server.");
-    }
-}
-
-function checkVerification() {
-    const verified = localStorage.getItem("verified");
-    const verifyTime = localStorage.getItem("verifyTime");
-
-    if (verified === "true" && verifyTime) {
-        const currentTime = Date.now();
-        const timeDifference = currentTime - parseInt(verifyTime);
-
-        if (timeDifference > 25 * 60 * 1000) {
-            localStorage.removeItem("verified");
-            localStorage.removeItem("verifyTime");
-            alert("Your verification has expired. Please verify again.");
+        if (validPasscodes.includes(passcode)) {
+            window.location.href = "dashboard.html";
+        } else {
+            document.getElementById("error").style.display = "block";
         }
     }
-}
-
-// Automatically check verification when the page loads
-window.onload = checkVerification;
 </script>
 
 </body>
