@@ -86,13 +86,10 @@ function checkVerification() {
         const currentTime = Date.now();
         const timeDifference = currentTime - parseInt(verifyTime);
 
-        // If 25 minutes have passed, clear verification
         if (timeDifference > 25 * 60 * 1000) {
             localStorage.removeItem("verified");
             localStorage.removeItem("verifyTime");
             alert("Your verification has expired. Please verify again.");
-        } else {
-            window.location.href = "dashboard.html";
         }
     }
 }
