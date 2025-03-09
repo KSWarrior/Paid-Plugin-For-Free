@@ -77,27 +77,23 @@
         }
     }
 
-    // Check if verification has expired
-    function checkExpiry() {
+    // Check if already verified and time is valid
+    window.onload = function() {
         var verified = localStorage.getItem("verified");
         var expiryTime = localStorage.getItem("expiry");
 
         if (verified === "true" && expiryTime) {
             var currentTime = new Date().getTime();
             if (currentTime > expiryTime) {
-                // Expired - clear storage and require verification again
+                // Expired - clear storage
                 localStorage.removeItem("verified");
                 localStorage.removeItem("expiry");
-                window.location.href = "index.html"; // Redirect back to verify page
             } else {
-                // If already verified and not expired, open dashboard
+                // Redirect to dashboard if not expired
                 window.location.href = "dashboard.html";
             }
         }
-    }
-
-    // Check expiry on page load
-    window.onload = checkExpiry;
+    };
 </script>
 
 </body>
